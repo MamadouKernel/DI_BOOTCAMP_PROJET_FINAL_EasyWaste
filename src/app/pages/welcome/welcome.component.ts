@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.less']
 })
 export class WelcomeComponent implements OnInit {
+  isCollapsed = false;
 
   constructor() { }
 

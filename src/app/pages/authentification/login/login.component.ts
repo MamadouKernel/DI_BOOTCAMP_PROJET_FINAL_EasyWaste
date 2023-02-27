@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-login",
@@ -9,10 +10,13 @@ import {UntypedFormBuilder, UntypedFormGroup, Validators} from "@angular/forms";
 export class LoginComponent implements OnInit {
   validateForm!: UntypedFormGroup;
 
-  constructor(private fb: UntypedFormBuilder) {
+  constructor(private fb: UntypedFormBuilder, private router: Router) {
+    
   }
 
   submitForm(): void {
+    this.router.navigate(["/welcome"])
+    
     if (this.validateForm.valid) {
       console.log("submit", this.validateForm.value);
     } else {

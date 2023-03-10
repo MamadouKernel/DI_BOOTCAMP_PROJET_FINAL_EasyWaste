@@ -5,12 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.less']
 })
-export class WelcomeComponent implements OnInit {
-  isCollapsed = false;
+export class WelcomeComponent{
 
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

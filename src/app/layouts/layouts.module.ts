@@ -1,19 +1,24 @@
+import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
+import {RouterModule} from "@angular/router";
 import {NzIconModule} from "ng-zorro-antd/icon";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzMenuModule} from "ng-zorro-antd/menu";
-import {WelcomeRoutingModule} from "./welcome-routing.module";
-import {WelcomeComponent} from "./welcome.component";
+import {AdminLayoutComponent} from "./admin-layout/admin-layout.component";
 
 
 @NgModule({
+  declarations: [
+    AdminLayoutComponent,
+  ],
   imports: [
-    WelcomeRoutingModule,
+    CommonModule,
     NzLayoutModule,
     NzMenuModule,
     NzIconModule,
+    RouterModule
   ],
-  declarations: [WelcomeComponent],
+
 })
-export class WelcomeModule {
+export class LayoutsModule {
 }

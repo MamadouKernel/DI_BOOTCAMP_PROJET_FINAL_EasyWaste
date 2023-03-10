@@ -2,13 +2,24 @@ import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
 import {AdminLayoutComponent} from "./layouts/admin-layout/admin-layout.component";
 import {AuthentificationComponent} from "./pages/authentification/authentification.component";
+import {WelcomeComponent} from "./pages/welcome/welcome.component";
 
 const routes: Routes = [
   {path: "", pathMatch: "full", redirectTo: "authentification"},
   {
     path: "admin",
     component: AdminLayoutComponent,
-    loadChildren: () => import("./pages/welcome/welcome.module").then(value => value.WelcomeModule),
+    children: [
+
+      {path: "", redirectTo: "home", pathMatch: "full"},
+      {path: "home", component: WelcomeComponent},
+      {
+        path: "users",
+        loadChildren: () => import("./pages/users/users.module").then(value => value.UsersModule),
+
+      },
+
+    ],
   },
   {
     path: "authentification",

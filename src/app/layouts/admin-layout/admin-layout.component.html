@@ -23,10 +23,10 @@
       <li nz-submenu nzIcon="user" nzOpen nzTitle="Utilisateurs">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="#">Enregistrements</a>
+            <a [routerLink]="routeMapping.addUser">Enregistrements</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="#">Listes Utilisateurs</a>
+            <a [routerLink]="routeMapping.listUser">Listes Utilisateurs</a>
           </li>
         </ul>
       </li>

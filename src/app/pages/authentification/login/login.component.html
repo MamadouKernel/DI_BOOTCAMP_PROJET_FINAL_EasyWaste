@@ -24,7 +24,7 @@
               </h6>
             </div>
 
-            <form class="container-fluid">
+            <form class="container-fluid" [formGroup]="form">
               <div class="row mb-3">
                 <div class="col-12 mb-2">
                   <div class="filed-input p-2">
@@ -32,7 +32,7 @@
                       <img alt="" src="assets/images/Admin-Settings-Male.png">
                     </div>
                     <div class="col field">
-                      <select class="form-control form-select">
+                      <select class="form-control form-select" formControlName="profile">
                         <option value="">Administrateur</option>
                         <option value="">Autre</option>
                       </select>
@@ -46,7 +46,7 @@
                       <img alt="" src="assets/images/Name-Tag.png">
                     </div>
                     <div class="col field">
-                      <input class="form-control" placeholder="Username or Gmail..........." type="text">
+                      <input formControlName="username" class="form-control" placeholder="Username or Gmail..........." type="text">
                     </div>
                   </div>
                 </div>
@@ -56,7 +56,7 @@
                       <img alt="" src="assets/images/Good-Pincode.png">
                     </div>
                     <div class="col field">
-                      <input class="form-control" id="" placeholder="Password..........." type="password">
+                      <input formControlName="password" class="form-control" id="" placeholder="Password..........." type="password">
                     </div>
                   </div>
                 </div>
@@ -66,7 +66,7 @@
             <div class="container-fluid">
               <div class="row mb-3">
                 <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center">
-                  <input aria-label="Remember Me" class="form-check-input mt-0 me-1" type="checkbox">
+                  <input formControlName="remember" aria-label="Remember Me" class="form-check-input mt-0 me-1" type="checkbox">
                   <label class="font-name-inter">Remember Me</label>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6  d-flex align-items-center justify-content-center">
@@ -78,7 +78,7 @@
 
 
             <div class="col-12 mt-2 mb-2 justify-content-center d-flex mt-2">
-              <button class="text-white bg-success btn align-items-center text-center">
+              <button (click)="submitForm()" class="text-white bg-success btn align-items-center text-center">
                 <label>Se connecter</label>
                 <img alt="login-image" class="icon-login" src="assets/images/login-rounded-up.png">
               </button>

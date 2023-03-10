@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-layout.component.less']
 })
 export class AdminLayoutComponent {
+  isCollapsed = false;
+
+  constructor() { }
+
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
 import {routeMapping} from "../../utils/routeMapping";
 
 @Component({
@@ -8,7 +8,8 @@ import {routeMapping} from "../../utils/routeMapping";
 })
 export class AdminLayoutComponent {
   isCollapsed = false;
- readonly routeMapping = routeMapping;
+  readonly routeMapping = routeMapping;
+  home = routeMapping.home;
 
   constructor() { }
 

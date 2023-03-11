@@ -8,18 +8,20 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {fr_FR, NZ_I18N} from "ng-zorro-antd/i18n";
 import {NzLayoutModule} from "ng-zorro-antd/layout";
 import {NzMenuModule} from "ng-zorro-antd/menu";
+import {NzTableModule} from "ng-zorro-antd/table";
 
 import {AppRoutingModule} from "./app-routing.module";
 import {AppComponent} from "./app.component";
 import {IconsProviderModule} from "./icons-provider.module";
 import {LayoutsModule} from "./layouts/layouts.module";
-import {WelcomeModule} from "./pages/welcome/welcome.module";
+import {WelcomeComponent} from "./pages/welcome/welcome.component";
 
 registerLocaleData(fr);
 
 @NgModule({
   declarations: [
     AppComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ registerLocaleData(fr);
     NzLayoutModule,
     NzMenuModule,
     LayoutsModule,
+    NzTableModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: fr_FR },
